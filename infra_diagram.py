@@ -4,5 +4,5 @@ from diagrams.aws.network import CloudFront
 from diagrams.aws.network import CloudMap
 
 with Diagram('Simple Diagram'):
-    EC2('crawler') >> CloudFront('www')
-    CloudMap('www')
+    
+    CloudMap('internet') >> EC2('Python Crawler')
