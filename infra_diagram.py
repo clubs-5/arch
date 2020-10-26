@@ -7,8 +7,10 @@ from diagrams.elastic import elasticsearch
 from diagrams.programming import language,framework
 from diagrams.onprem.queue import Kafka
 from diagrams.onprem.client import Users,Client
+from diagrams.generic import blank
 
-with Diagram('Simple Diagram'):
+
+with Diagram('service_arch'):
     internet = CloudMap('internet')
     crawler = EC2('Python Crawler')
     rdb = database.Mysql('RDB')
@@ -18,15 +20,21 @@ with Diagram('Simple Diagram'):
     backend = framework.Flask('Backend')
     #users = Users('users')
     client = Client('client')
+
+    etl = blank.Blank('ETL')
+
+    hdfs = compute.Server('HDFS')
     
+    '''
     with Cluster('HDFS Cluster'):
         hdfs_master = compute.Server('NameNode')
         cluster = [hdfs_master, 
                    compute.Server('DataNode1'),
                    compute.Server('DataNode2'),
                    compute.Server('DataNode3')]
+    '''
 
         
         
         
-    internet >> crawler >> Edge(color='orange') >> cluster >> rdb >> predictior >> backend >> client
+    internet >> crawler >> hdfs >> etl >> rdb >> predictior >> backend >> client
