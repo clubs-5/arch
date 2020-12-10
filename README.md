@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 # 架構 architecture
 在這裏你會得到我們專案以下架構資訊:
 *  Data Piepline 架構
@@ -46,3 +49,19 @@
 ## 基礎建設 infra 
 基礎建設的定義指的是實體機, 虛擬機, 作業系統與網路串聯設定
 專題 infra 架構
+=======
+# infra
+>>>>>>> 2703c3b... Initial commit
+=======
+# infra
+=======
+# 服務架構 service architecture
+服務架構的定義指的是服務之間的關係
+>>>>>>> 3090fd4... Update README.md
+
+
+
+# 基礎建設 infra 
+基礎建設的定義指的是實體機, 虛擬機, 作業系統與網路串聯設定
+專題 infra 架構
+>>>>>>> aebdb05... Update README.md
